@@ -11,6 +11,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="teamapp.id2212.ict.kth.se.teamapp.UserProfile">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/einstein"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -19,81 +29,76 @@
         app:srcCompat="@android:drawable/ic_dialog_email"
         android:layout_marginLeft="@dimen/fab_margin"
         android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="14dp"
         android:layout_below="@+id/profile_image"
         android:layout_centerHorizontal="true" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/einstein"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FF000000"
-        android:layout_marginTop="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Albert Einstein"
-        android:ems="12"
-        android:id="@+id/editText2"
-        android:cursorVisible="false"
-        android:contextClickable="false"
-        android:drawableStart="@drawable/ic_face_black_24dp"
-        android:background="@drawable/edittext_style"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/fab"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="none"
         android:text="albert@einstein.com"
         android:ems="12"
         android:id="@+id/editText3"
         android:drawableStart="@drawable/ic_email_black_24dp"
         android:background="@drawable/edittext_style"
-        android:layout_alignTop="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_marginTop="33dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="12"
-        android:id="@+id/editText5"
-        android:text="The important thing is not to stop questioning. Curiosity has its own reason for existing."
-        android:lines="5"
-        android:drawableStart="@drawable/ic_description_black_24dp"
-        android:background="@drawable/edittext_style"
-        android:layout_below="@+id/editText3"
-        android:layout_alignStart="@+id/editText3"
-        android:layout_marginTop="13dp" />
-
-    <Button
-        android:text="See Feedback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_marginBottom="12dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="34dp" />
+        android:padding="5dp"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="12dp"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_alignStart="@+id/editText5" />
 
     <Button
         android:text="Leave Feedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
-        android:layout_marginEnd="17dp"
-        android:layout_alignBaseline="@+id/button"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignParentEnd="true" />
+        android:background="@drawable/button_style"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/fab"
+        android:layout_marginStart="22dp" />
+
+    <Button
+        android:text="See Feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:background="@drawable/button_style"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/button2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:text="Albert Einstein"
+        android:ems="12"
+        android:id="@+id/editText2"
+        android:contextClickable="false"
+        android:drawableStart="@drawable/ic_face_black_24dp"
+        android:background="@drawable/edittext_style"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:padding="5dp"
+        android:layout_below="@+id/fab"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignEnd="@+id/editText3"
+        android:inputType="none" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:ems="12"
+        android:id="@+id/editText5"
+        android:text="The important thing is not to stop questioning. Curiosity has its own reason for existing."
+        android:lines="5"
+        android:drawableStart="@drawable/ic_description_black_24dp"
+        android:background="@drawable/edittext_style"
+        android:padding="5dp"
+        android:layout_marginBottom="17dp"
+        android:layout_above="@+id/button2"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignEnd="@+id/button2" />
 
 </RelativeLayout>
