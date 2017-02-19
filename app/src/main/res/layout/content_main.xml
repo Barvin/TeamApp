@@ -21,9 +21,9 @@
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView5"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="67dp"
-        android:id="@+id/courses_list" />
+        android:layout_marginTop="49dp"
+        android:id="@+id/courses_list"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
