@@ -24,15 +24,6 @@ public class SeeFeedback extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setTitle("Feedback");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         mGivenFeedbackTextView = (TextView) findViewById(R.id.given_feedbacks);
         mReceivedFeedbackTextView = (TextView) findViewById(R.id.received_feedbacks);
 
