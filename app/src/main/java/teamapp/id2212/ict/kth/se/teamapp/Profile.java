@@ -12,7 +12,7 @@ public class Profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_courses);
+        setContentView(R.layout.activity_profile);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,30 +26,10 @@ public class Profile extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        findViewById(R.id.button_given).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewGivenFeedback();
-            }
-        });
 
-        findViewById(R.id.button_received).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewReceivedFeedback();
-            }
-        });
     }
 
-    public void viewGivenFeedback(){
-        findViewById(R.id.given_feedbacks).setVisibility(View.VISIBLE);
-        findViewById(R.id.received_feedbacks).setVisibility(View.GONE);
-    }
 
-    public void viewReceivedFeedback(){
-        findViewById(R.id.received_feedbacks).setVisibility(View.VISIBLE);
-        findViewById(R.id.given_feedbacks).setVisibility(View.GONE);
-    }
 
 
 
