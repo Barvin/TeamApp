@@ -18,11 +18,6 @@
             android:id="@+id/nav_seeFeedback"
             android:icon="@drawable/ic_menu_manage"
             android:title="Feedback" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Login" />
-
     </group>
 
     <item android:title="Communicate">
