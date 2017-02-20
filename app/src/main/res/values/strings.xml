@@ -9,4 +9,5 @@
 
     <string name="title_activity_personal_profile">Personal Profile</string>
     <string name="title_activity_user_profile">User Profile</string>
+    <string name="title_activity_user_skills">Your skills</string>
 </resources>
