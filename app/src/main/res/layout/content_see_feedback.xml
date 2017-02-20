@@ -13,56 +13,40 @@
     tools:context="teamapp.id2212.ict.kth.se.teamapp.SeeFeedback"
     tools:showIn="@layout/activity_see_feedback">
 
-    <LinearLayout
+    <ScrollView
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="17dp"
-        android:id="@+id/received_feedbacks"
-        android:layout_height="700px">
+        android:layout_height="wrap_content"
+        android:id="@+id/received_feedbacks_scrollview"
+        >
 
         <TextView
-            android:text="Hard worker"
+            android:id="@+id/received_feedbacks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView4"
-            android:text="Responsible"
-            android:textSize="25sp"
-            />
-    </LinearLayout>
+    </ScrollView>
 
-    <LinearLayout
+    <ScrollView
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="17dp"
-        android:layout_height="700px"
-        android:id="@+id/given_feedbacks"
-        android:visibility="gone"
-
+        android:layout_height="wrap_content"
+        android:id="@+id/given_feedbacks_scrollview"
         >
 
         <TextView
-            android:text="Respectful"
+            android:id="@+id/given_feedbacks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
             android:textSize="25sp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView4"
-            android:text="Helpful"
-            android:textSize="25sp"/>
-    </LinearLayout>
+    </ScrollView>
 
     <Button
         android:text="Given"
