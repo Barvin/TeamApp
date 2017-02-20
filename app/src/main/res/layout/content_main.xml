@@ -19,17 +19,48 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="49dp"
         android:id="@+id/courses_list"
-        android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start building your team."
-        android:id="@+id/header"
         android:textSize="24sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textStyle="normal|bold" />
+
+    <Button
+        android:text="Add course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:background="@drawable/button_style"
+        android:textColor="@color/white"
+        android:layout_marginTop="37dp"
+        android:layout_alignTop="@+id/header"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can't find your course?"
+        android:id="@+id/header"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="92dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Search for matches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchMatches"
+        android:background="@drawable/button_style"
+        android:textColor="@color/white"
+        android:layout_below="@+id/courses_list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp" />
 
 </RelativeLayout>
