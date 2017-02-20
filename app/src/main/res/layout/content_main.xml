@@ -13,17 +13,23 @@
     tools:context="teamapp.id2212.ict.kth.se.teamapp.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
     <AutoCompleteTextView
+        android:hint="First, find your course"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="49dp"
         android:id="@+id/courses_list"
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start building your team."
+        android:id="@+id/header"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold" />
 
 </RelativeLayout>

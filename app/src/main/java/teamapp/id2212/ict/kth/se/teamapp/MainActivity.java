@@ -49,10 +49,25 @@ public class MainActivity extends AppCompatActivity
         AutoCompleteTextView textView = (AutoCompleteTextView)
                 findViewById(R.id.courses_list);
         textView.setAdapter(adapter);
+
+        textView.setThreshold(0);
+
+        findViewById(R.id.courses_list).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                courseListSelected();
+            }
+        });
     }
         private static final String[] COURSES = new String[] {
-                "Advanced Internetworking II (IK2217)", "Developing Mobile Applications (ID2216)", "Network Programming with Java (ID2212)", "Computer Hardware Engineering (ID1201)"
+                "Advanced Internetworking II  ( IK2217 ) ", "Developing Mobile Applications  ( ID2216 ) ", "Network Programming with Java  ( ID2212 ) ", "Computer Hardware Engineering ( ID1201 )"
         };
+
+    public void courseListSelected(){
+        AutoCompleteTextView textView = (AutoCompleteTextView)
+                findViewById(R.id.courses_list);
+        textView.showDropDown();
+    }
 
     @Override
     public void onBackPressed() {
@@ -99,6 +114,9 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, PersonalProfile.class);
             startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
+            Intent intent = new Intent(this, SeeFeedback.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_seeFeedback) {
             Intent intent = new Intent(this, UserProfile.class);
             startActivity(intent);
         } else if (id == R.id.nav_manage) {

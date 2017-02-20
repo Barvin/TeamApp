@@ -6,7 +6,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_courses">Courses</string>
-
+    <string name="title_activity_see_feedback">SeeFeedback</string>
     <string name="title_activity_personal_profile">Personal Profile</string>
     <string name="title_activity_user_profile">User Profile</string>
     <string name="title_activity_login">Login</string>
