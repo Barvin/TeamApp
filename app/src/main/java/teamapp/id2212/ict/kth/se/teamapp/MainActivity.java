@@ -111,12 +111,15 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, Profile.class);
             startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-
+            Intent intent = new Intent(this, PersonalProfile.class);
+            startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_seeFeedback) {
             Intent intent = new Intent(this, SeeFeedback.class);
             startActivity(intent);
+        } else if (id == R.id.nav_seeFeedback) {
+            Intent intent = new Intent(this, UserProfile.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
