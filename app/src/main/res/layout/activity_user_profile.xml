@@ -65,7 +65,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/button"
         android:background="@drawable/button_style"
-        android:textColor="@color/white"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/button2" />
 
