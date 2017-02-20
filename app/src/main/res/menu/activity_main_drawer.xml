@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_profile"
+            android:id="@+id/nav_personalprofile"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Profile" />
+            android:title="Personal Profile" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_courses"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="Courses" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_userprofile"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="User Profile" />
+        <item
+            android:id="@+id/nav_skills"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Skills" />
         <item
             android:id="@+id/nav_seeFeedback"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Profile" />
+            android:title="Feedback" />
     </group>
 
     <item android:title="Communicate">
