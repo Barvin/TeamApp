@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity
         });
     }
         private static final String[] COURSES = new String[] {
-                "Advanced Internetworking II (IK2217)", "Developing Mobile Applications (ID2216)", "Network Programming with Java (ID2212)", "Computer Hardware Engineering (ID1201)"
+                "Advanced Internetworking II  ( IK2217 ) ", "Developing Mobile Applications  ( ID2216 ) ", "Network Programming with Java  ( ID2212 ) ", "Computer Hardware Engineering ( ID1201 )"
         };
 
     public void courseListSelected(){
