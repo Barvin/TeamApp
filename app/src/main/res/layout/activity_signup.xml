@@ -19,7 +19,6 @@
         android:layout_alignLeft="@+id/signup_email_text"
         android:layout_alignStart="@+id/signup_email_text"
         android:layout_marginTop="24dp"
-        android:id="@+id/signup_password_text"
         android:hint="choose a password"
         android:background="@drawable/edittext_style"
         android:padding="5dp" />
@@ -35,19 +34,6 @@
         android:background="@drawable/button_style"
         android:textColor="@color/white" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/signup_email_text"
-        android:hint="Enter Your email address"
-        android:background="@drawable/edittext_style"
-        android:padding="5dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="14dp" />
-
     <TextView
         android:text="Register"
         android:layout_width="match_parent"
@@ -58,6 +44,17 @@
         android:gravity="center_horizontal"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:hint="Enter Your email address"
+        android:background="@drawable/edittext_style"
+        android:padding="5dp"
+        android:layout_alignBottom="@+id/button_register"
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>

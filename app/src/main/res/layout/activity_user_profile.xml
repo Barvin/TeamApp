@@ -43,7 +43,7 @@
         android:drawableStart="@drawable/ic_email_black_24dp"
         android:background="@drawable/edittext_style"
         android:padding="5dp"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/signup_password_text"
         android:layout_marginTop="12dp"
         android:layout_alignEnd="@+id/button2"
         android:layout_alignStart="@+id/editText5" />
@@ -73,7 +73,7 @@
         android:layout_width="wrap_content"
         android:text="Albert Einstein"
         android:ems="12"
-        android:id="@+id/editText2"
+        android:id="@+id/signup_password_text"
         android:contextClickable="false"
         android:drawableStart="@drawable/ic_face_black_24dp"
         android:background="@drawable/edittext_style"
