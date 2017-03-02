@@ -40,14 +40,8 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-<<<<<<< HEAD
-        android:id="@+id/editText3"
-        android:hint="Email"
-
-=======
         android:id="@+id/signup_email_text"
         android:hint="Enter Your email address"
->>>>>>> 58bc04ecca9aad4c9e4189c4680635f72d2780b8
         android:background="@drawable/edittext_style"
         android:padding="5dp"
         android:layout_below="@+id/textView"
