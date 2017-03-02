@@ -9,6 +9,7 @@
     <string name="title_activity_see_feedback">SeeFeedback</string>
     <string name="title_activity_personal_profile">Personal Profile</string>
     <string name="title_activity_user_profile">User Profile</string>
+    <string name="title_activity_user_skills">Your skills</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_signup">Signup</string>
 </resources>

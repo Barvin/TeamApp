@@ -48,8 +48,8 @@
                 android:value="teamapp.id2212.ict.kth.se.teamapp.MainActivity" />
         </activity>
         <activity
-            android:name=".Login"
-            android:label="@string/title_activity_login"
+            android:name=".UserSkills"
+            android:label="@string/title_activity_user_skills"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
