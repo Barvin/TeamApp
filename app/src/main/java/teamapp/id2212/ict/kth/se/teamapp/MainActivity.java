@@ -113,7 +113,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_signup) {
             Intent intent = new Intent(this, Signup.class);
             startActivity(intent);
-        } else if (id == R.id.nav_send) {
+        }
+        else if (id == R.id.nav_skills) {
+            Intent intent = new Intent(this, UserSkills.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_send) {
 
         }
 
