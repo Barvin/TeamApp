@@ -88,6 +88,8 @@ public class Signup extends BaseActivity implements View.OnClickListener{
                         hideProgressDialog();
 
                         if (task.isSuccessful()) {
+                            Toast.makeText(Signup.this, "Signed up!",
+                                    Toast.LENGTH_SHORT).show();
                             onAuthSuccess(task.getResult().getUser());
                         } else {
                             Toast.makeText(Signup.this, "Sign Up Failed",
