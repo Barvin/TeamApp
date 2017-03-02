@@ -39,7 +39,7 @@
         android:inputType="none"
         android:text="albert@einstein.com"
         android:ems="12"
-        android:id="@+id/editText3"
+        android:id="@+id/signup_email_text"
         android:drawableStart="@drawable/ic_email_black_24dp"
         android:background="@drawable/edittext_style"
         android:padding="5dp"
@@ -80,8 +80,8 @@
         android:layout_marginTop="11dp"
         android:padding="5dp"
         android:layout_below="@+id/fab"
-        android:layout_alignStart="@+id/editText3"
-        android:layout_alignEnd="@+id/editText3"
+        android:layout_alignStart="@+id/signup_email_text"
+        android:layout_alignEnd="@+id/signup_email_text"
         android:inputType="none" />
 
     <EditText
