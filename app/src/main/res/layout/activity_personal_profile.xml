@@ -13,59 +13,65 @@
 
     <EditText
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="albert@einstein.com"
+        android:ems="12"
+        android:drawableStart="@drawable/ic_email_black_24dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/edittext_style"
+        android:padding="5dp"
+        android:layout_above="@+id/personal_profile_desc_text"
+        android:layout_alignStart="@+id/personal_profile_name_text"
+        android:id="@+id/personal_profile_email_text" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/personal_profile_imgBtn"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="70dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
         android:inputType="textPersonName"
         android:text="Albert Einstein"
         android:ems="12"
-        android:id="@+id/signup_password_text"
-        android:layout_above="@+id/signup_email_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:id="@+id/personal_profile_name_text"
         android:contextClickable="false"
         android:drawableStart="@drawable/ic_face_black_24dp"
         android:background="@drawable/edittext_style"
         android:layout_height="wrap_content"
         tools:padding="5dp"
-        android:cursorVisible="false" />
+        android:cursorVisible="false"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/personal_profile_email_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="124dp"
+        android:id="@+id/personal_profile_saveBtn" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="12"
-        android:id="@+id/editText5"
+        android:id="@+id/personal_profile_desc_text"
         android:text="The important thing is not to stop questioning. Curiosity has its own reason for existing."
         android:lines="5"
         android:drawableStart="@drawable/ic_description_black_24dp"
-        android:layout_marginBottom="41dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/signup_email_text"
-        android:background="@drawable/edittext_style"
-        android:padding="5dp" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:src="@drawable/einstein"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FF000000"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="albert@einstein.com"
-        android:ems="12"
-        android:id="@+id/signup_email_text"
-        android:drawableStart="@drawable/ic_email_black_24dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/edittext_style"
         android:padding="5dp"
-        android:layout_above="@+id/editText5"
-        android:layout_alignStart="@+id/signup_password_text" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/personal_profile_email_text" />
 
 
 </RelativeLayout>
