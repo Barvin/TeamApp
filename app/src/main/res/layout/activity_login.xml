@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"
-        android:layout_below="@+id/button_login"
+        android:layout_below="@+id/signup_button_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
@@ -24,10 +24,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
+        android:id="@+id/signup_password_text"
+        android:layout_below="@+id/signup_email_text"
+        android:layout_alignLeft="@+id/signup_email_text"
+        android:layout_alignStart="@+id/signup_email_text"
         android:layout_marginTop="10dp"
 
         android:text="Password"
@@ -38,7 +38,7 @@
         android:text="Connect with Linkedin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/signup_button_linkedin"
         android:layout_marginTop="16dp"
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
@@ -49,9 +49,9 @@
         android:text="Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_login"
+        android:id="@+id/signup_button_login"
 
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/signup_password_text"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:background="@drawable/button_style"
@@ -61,11 +61,11 @@
         android:text="Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_register"
+        android:id="@+id/signup_button_register"
         android:onClick="button_register"
         android:layout_marginTop="17dp"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button_login"
+        android:layout_below="@+id/signup_button_linkedin"
+        android:layout_alignStart="@+id/signup_button_login"
         android:background="@drawable/button_style"
         android:textColor="@color/white" />
 
@@ -76,11 +76,11 @@
         android:ems="10"
         android:layout_marginLeft="65dp"
         android:layout_marginTop="64dp"
-        android:id="@+id/editText"
+        android:id="@+id/signup_email_text"
         android:padding="5dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/button2"
         android:hint="Your email address"
         android:background="@drawable/edittext_style"
-        android:elevation="1dp" />
+        android:elevation="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

@@ -43,16 +43,16 @@
         android:drawableStart="@drawable/ic_email_black_24dp"
         android:background="@drawable/edittext_style"
         android:padding="5dp"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/signup_password_text"
         android:layout_marginTop="12dp"
-        android:layout_alignEnd="@+id/button2"
+        android:layout_alignEnd="@+id/signup_button_linkedin"
         android:layout_alignStart="@+id/editText5" />
 
     <Button
         android:text="Leave Feedback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/signup_button_linkedin"
         android:background="@drawable/button_style"
         android:textColor="@color/white"
         android:layout_alignParentBottom="true"
@@ -67,13 +67,13 @@
         android:textColor="@color/white"
         android:background="@drawable/button_style"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/button2" />
+        android:layout_toStartOf="@+id/signup_button_linkedin" />
 
     <EditText
         android:layout_width="wrap_content"
         android:text="Albert Einstein"
         android:ems="12"
-        android:id="@+id/editText2"
+        android:id="@+id/signup_password_text"
         android:contextClickable="false"
         android:drawableStart="@drawable/ic_face_black_24dp"
         android:background="@drawable/edittext_style"
@@ -97,8 +97,8 @@
         android:background="@drawable/edittext_style"
         android:padding="5dp"
         android:layout_marginBottom="17dp"
-        android:layout_above="@+id/button2"
+        android:layout_above="@+id/signup_button_linkedin"
         android:layout_alignStart="@+id/button"
-        android:layout_alignEnd="@+id/button2" />
+        android:layout_alignEnd="@+id/signup_button_linkedin" />
 
 </RelativeLayout>

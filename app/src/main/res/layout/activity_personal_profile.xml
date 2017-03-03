@@ -16,7 +16,7 @@
         android:inputType="textPersonName"
         android:text="Albert Einstein"
         android:ems="12"
-        android:id="@+id/editText2"
+        android:id="@+id/signup_password_text"
         android:layout_above="@+id/signup_email_text"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
@@ -65,7 +65,7 @@
         android:background="@drawable/edittext_style"
         android:padding="5dp"
         android:layout_above="@+id/editText5"
-        android:layout_alignStart="@+id/editText2" />
+        android:layout_alignStart="@+id/signup_password_text" />
 
 
 </RelativeLayout>

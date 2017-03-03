@@ -29,6 +29,7 @@ public class Signup extends BaseActivity implements View.OnClickListener{
     private DatabaseReference mDatabase;
 
     private Button mSignUpButton;
+    private Button mSignInButton;
     private EditText mEmailField;
     private EditText mPasswordField;
 
@@ -36,19 +37,31 @@ public class Signup extends BaseActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_login);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
 
         // Views
-        mSignUpButton = (Button) findViewById(R.id.button_register);
+        mSignUpButton = (Button) findViewById(R.id.signup_button_register);
+        mSignInButton = (Button) findViewById(R.id.signup_button_login);
         mEmailField = (EditText) findViewById(R.id.signup_email_text);
         mPasswordField = (EditText) findViewById(R.id.signup_password_text);
 
-
+        // Click listeners
+        mSignInButton.setOnClickListener(this);
         mSignUpButton.setOnClickListener(this);
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // Check auth on Activity start
+        if (mAuth.getCurrentUser() != null) {
+            onAuthSuccess(mAuth.getCurrentUser());
+        }
     }
 
     private boolean validateForm() {
@@ -70,6 +83,33 @@ public class Signup extends BaseActivity implements View.OnClickListener{
         return result;
     }
 
+    private void signIn() {
+        Log.d(TAG, "signIn");
+        if (!validateForm()) {
+            return;
+        }
+
+        showProgressDialog();
+        String email = mEmailField.getText().toString();
+        String password = mPasswordField.getText().toString();
+
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        Log.d(TAG, "signIn:onComplete:" + task.isSuccessful());
+                        hideProgressDialog();
+
+                        if (task.isSuccessful()) {
+                            onAuthSuccess(task.getResult().getUser());
+                        } else {
+                            Toast.makeText(Signup.this, "Sign In Failed",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+
     private void signUp() {
         Log.d(TAG, "signUp");
         if (!validateForm()) {
@@ -88,6 +128,8 @@ public class Signup extends BaseActivity implements View.OnClickListener{
                         hideProgressDialog();
 
                         if (task.isSuccessful()) {
+                            Toast.makeText(Signup.this, "Signed up!",
+                                    Toast.LENGTH_SHORT).show();
                             onAuthSuccess(task.getResult().getUser());
                         } else {
                             Toast.makeText(Signup.this, "Sign Up Failed",
@@ -128,8 +170,9 @@ public class Signup extends BaseActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         int i = v.getId();
-
-        if (i == R.id.button_register) {
+        if (i == R.id.signup_button_login) {
+            signIn();
+        } else if (i == R.id.signup_button_register) {
             signUp();
         }
     }
