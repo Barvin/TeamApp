@@ -20,19 +20,19 @@
         android:layout_marginTop="20dp" />
 
     <EditText
+        android:id="@+id/personal_profile_name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/personal_profile_name_text"
-        android:layout_below="@+id/signup_email_text"
         android:layout_alignLeft="@+id/signup_email_text"
         android:layout_alignStart="@+id/signup_email_text"
+        android:layout_below="@+id/signup_email_text"
         android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_style"
+        android:ems="10"
 
-        android:text="Password"
-        android:padding="5dp"
-        android:background="@drawable/edittext_style" />
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="5dp" />
 
     <Button
         android:text="Connect with Linkedin"
