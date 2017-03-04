@@ -4,6 +4,10 @@
     <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+		<activity
+            android:theme="@style/AppTheme.NoActionBar">
+			</activity>
         <activity
             android:name=".Profile"
             android:label="@string/title_activity_courses"
@@ -31,7 +38,7 @@
         <activity
             android:name=".SeeFeedback"
             android:label="@string/title_activity_see_feedback"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PersonalProfile"
             android:label="@string/title_activity_personal_profile"
@@ -62,11 +69,20 @@
             android:name=".Signup"
             android:label="@string/title_activity_signup"
             android:parentActivityName=".MainActivity">
+<<<<<<< HEAD
+=======
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+>>>>>>> 111b753720a44499a0d32ccedb1feb1a2076cdf2
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="teamapp.id2212.ict.kth.se.teamapp.MainActivity" />
         </activity>
+        <activity android:name=".CalendarActivity"></activity>
     </application>
 
 </manifest>

@@ -27,6 +27,10 @@
             android:id="@+id/nav_signup"
             android:icon="@drawable/ic_person_add_black_24dp"
             android:title="Sign Up" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Calendar Test" />
     </group>
 
     <item android:title="Communicate">
