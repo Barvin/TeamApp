@@ -2,7 +2,6 @@ package teamapp.id2212.ict.kth.se.teamapp;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -46,7 +45,7 @@ public class Signup extends BaseActivity implements View.OnClickListener{
         mSignUpButton = (Button) findViewById(R.id.signup_button_register);
         mSignInButton = (Button) findViewById(R.id.signup_button_login);
         mEmailField = (EditText) findViewById(R.id.signup_email_text);
-        mPasswordField = (EditText) findViewById(R.id.signup_password_text);
+        mPasswordField = (EditText) findViewById(R.id.personal_profile_name_text);
 
         // Click listeners
         mSignInButton.setOnClickListener(this);
@@ -146,7 +145,7 @@ public class Signup extends BaseActivity implements View.OnClickListener{
         writeNewUser(user.getUid(), username, user.getEmail());
 
         // Go to MainActivity
-        startActivity(new Intent(Signup.this, MainActivity.class));
+        startActivity(new Intent(Signup.this, PersonalProfile.class));
         finish();
     }
 
