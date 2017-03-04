@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity
             }
         });
     }
-        private static final String[] COURSES = new String[] {
-                "Advanced Internetworking II  ( IK2217 ) ", "Developing Mobile Applications  ( ID2216 ) ", "Network Programming with Java  ( ID2212 ) ", "Computer Hardware Engineering ( ID1201 )"
-        };
+    private static final String[] COURSES = new String[] {
+            "Advanced Internetworking II  ( IK2217 ) ", "Developing Mobile Applications  ( ID2216 ) ", "Network Programming with Java  ( ID2212 ) ", "Computer Hardware Engineering ( ID1201 )"
+    };
 
     public void courseListSelected(){
         AutoCompleteTextView textView = (AutoCompleteTextView)
@@ -118,10 +118,14 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, UserSkills.class);
             startActivity(intent);
         }
+        else if (id == R.id.nav_calendar) {
+            Intent intent = new Intent(this, CalendarActivity.class);
+            startActivity(intent);
+        }
 
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
 
     }
 }
