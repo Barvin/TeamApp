@@ -104,11 +104,11 @@ public class PersonalProfile extends AppCompatActivity {
         final String user_id = mAuth.getCurrentUser().getUid();
         final String Desc = mDescField.getText().toString().trim();
 
-        if(TextUtils.isEmpty(Name)){
+        if(!TextUtils.isEmpty(Name ) && mImguri!= null ) {
             mProgress.setMessage("Saving Information");
             mProgress.show();
-        }
-            StorageReference filepath= mStorageImg.child(mImguri.getLastPathSegment());
+
+            StorageReference filepath = mStorageImg.child(mImguri.getLastPathSegment());
             filepath.putFile(mImguri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -118,15 +118,14 @@ public class PersonalProfile extends AppCompatActivity {
                     mDbUsers.child(user_id).child("image").setValue(downloadUrl);
                     mProgress.dismiss();
 
-                    Intent mainIntent = new Intent(PersonalProfile.this,MainActivity.class);
+                    Intent mainIntent = new Intent(PersonalProfile.this, MainActivity.class);
                     mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(mainIntent);
 
                 }
 
-                }
-            );
-
+            });
+        }
 
 
     }
