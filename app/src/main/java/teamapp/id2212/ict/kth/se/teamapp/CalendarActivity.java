@@ -30,7 +30,6 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
@@ -47,7 +46,7 @@ import java.util.List;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
-public class CalendarActivity extends AppCompatActivity
+public class CalendarActivity extends Activity
         implements EasyPermissions.PermissionCallbacks {
     GoogleAccountCredential mCredential;
     private TextView mOutputText;
@@ -70,6 +69,8 @@ public class CalendarActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         LinearLayout activityLayout = new LinearLayout(this);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
@@ -84,6 +85,9 @@ public class CalendarActivity extends AppCompatActivity
 
         mCallApiButton = new Button(this);
         mCallApiButton.setText(BUTTON_TEXT);
+
+
+
         mCallApiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -356,15 +360,13 @@ public class CalendarActivity extends AppCompatActivity
             // List the next 10 events from the primary calendar.
             DateTime now = new DateTime(System.currentTimeMillis());
             List<String> eventStrings = new ArrayList<String>();
-            Events events = mService.events().list("sec")
+            Events events = mService.events().list("primary")
                     .setMaxResults(10)
                     .setTimeMin(now)
                     .setOrderBy("startTime")
                     .setSingleEvents(true)
                     .execute();
-
             List<Event> items = events.getItems();
-
 
             for (Event event : items) {
                 DateTime start = event.getStart().getDateTime();
