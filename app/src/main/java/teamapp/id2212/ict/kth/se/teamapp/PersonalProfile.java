@@ -43,10 +43,11 @@ public class PersonalProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_profile);
-
+        String user_id_fromSignup = getIntent().getStringExtra("user_id");
+        String user_email_fromSignup = getIntent().getStringExtra("user_email");
         mAuth=FirebaseAuth.getInstance();
         mStorageImg= FirebaseStorage.getInstance().getReference().child("profile_images");
-        mDbUsers= FirebaseDatabase.getInstance().getReference().child("Users");
+        mDbUsers= FirebaseDatabase.getInstance().getReference().child("users");
         mProgress = new ProgressDialog(this);
 
 
@@ -55,6 +56,7 @@ public class PersonalProfile extends AppCompatActivity {
         mNameField= (TextView) findViewById(R.id.personal_profile_name_text);
         mEmailField =(TextView) findViewById(R.id.personal_profile_email_text);
         mDescField = (TextView) findViewById(R.id.personal_profile_desc_text);
+        mEmailField.setText(mAuth.getCurrentUser().getEmail());
 
         mSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override

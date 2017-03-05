@@ -2,9 +2,6 @@ package teamapp.id2212.ict.kth.se.teamapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 
@@ -105,7 +103,7 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, PersonalProfile.class);
             startActivity(intent);
         } else if (id == R.id.nav_seeFeedback) {
-            Intent intent = new Intent(this, SeeFeedback.class);
+            Intent intent = new Intent(this, Add_course.class);
             startActivity(intent);
         } else if (id == R.id.nav_userprofile) {
             Intent intent = new Intent(this, UserProfile.class);
